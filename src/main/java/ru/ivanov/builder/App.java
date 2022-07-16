@@ -9,9 +9,11 @@ public class App {
     Truck buy = buy();
     Truck truck = buyAvito();
     Truck send = send();
+    Truck2 steal = steal();
     log.info("Truck 1: {}", buy);
     log.info("Truck 2: {}", truck);
     log.info("Truck 3: {}", send);
+    log.info("Truck 4: {}", steal);
   }
 
   public static Truck buy() {
@@ -38,6 +40,16 @@ public class App {
       .year(2022)
       .driver("Иванов")
       .loadCapacity(20000)
+      .build();
+  }
+
+  public static Truck2 steal() {
+    return Truck2.builder()
+      .owner("ООО Прокат")
+      .stsNumber("123 8314")
+      .year(1987)
+      .driver("Петров")
+      .loadCapacity(23000)
       .build();
   }
 }
